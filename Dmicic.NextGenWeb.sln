@@ -10,6 +10,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextGenWeb.Entity", "NextGenWeb.Entity\NextGenWeb.Entity.csproj", "{F7E961B9-E61F-46BF-9BF8-BB56AFAD888C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{3846F706-BEAC-41D3-A6B3-808C5129CE2F}"
+	ProjectSection(SolutionItems) = preProject
+		Tools\NuGet.exe = Tools\NuGet.exe
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{8460AA2B-B13A-4381-8E97-C8F6BC437C11}"
+	ProjectSection(SolutionItems) = preProject
+		Libs\GAPI.dll = Libs\GAPI.dll
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
