@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Search";
+}
+@section featured
+{
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>Search.</h1>
+                <h2>Search everywhere...</h2>
+            </hgroup>
+                <table>
+                    <tr>
+                        <td><img src="~/Images/google.png" alt="Google" /></td>
+                        <td>@Html.ActionLink("Google", "Result", new { provider = "google" }, new { target = "_blank" })</td>
+                    </tr>
+                    <tr>
+                        <td><img src="~/Images/twitter.png" alt="Twitter" /></td>
+                        <td>@Html.ActionLink("Twitter", "Result", new { provider = "twitter" }, new { target = "_blank" })</td>
+                    </tr>
+                </table>
+        </div>
+    </section>
+}
+
+<h3>Search for...</h3>
+
+@using (Ajax.BeginForm("Search", "Home", new AjaxOptions()))
+{ 
+    <table>
+        <tr>
+            <td>@Html.TextBox("term", null, new { style = "height:50px; width:300px; font-size:30px; margin:0px;" })</td>
+            <td><input type="submit" value="Go!" style="height:60px; width:100px;" /></td>
+        </tr>
+    </table>
+    
+    
+}

@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Result";
+}
+
+@section includes
+{
+    <script src="~/Scripts/ShowResult.js"></script>
+}
+
+@section featured
+{
+    <section class="featured">
+        <div class="content-wrapper">
+            <table>
+                <tr>
+                    <td><img src="~/Images/@(ViewBag.Provider).png" alt="@ViewBag.Provider" /></td>
+                    <td>
+                        <hgroup class="title">
+                            <h1>@ViewBag.Provider search results...</h1>
+                        </hgroup>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+}
+
+<table>
+    <tbody>
+        <tr>
+            <th>Title</th>
+            <th>Url</th>
+            <th>Content</th>
+        </tr>
+    </tbody>
+    <tbody data-bind="foreach: items">
+        <tr>
+            <td data-bind="html: title"></td>
+            <td data-bind="html: url"></td>
+            <td data-bind="html: content"></td>
+        </tr>
+    </tbody>
+</table>
